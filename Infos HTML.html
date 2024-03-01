@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="refresh" content="5;url=https://www.youtube.com">
+</head>
+<body>
+    <p>Vous allez être redirigé vers YouTube dans 5 secondes...</p>
+</body>
+</html>
+<script>
+    // Récupère l'adresse IP du visiteur
+    fetch('https://api.ipify.org?format=json')
+        .then(response => response.json())
+        .then(data => {
+            const ipAddress = data.ip;
+            // Enregistrez l'adresse IP dans un fichier journal ou une base de données
+            console.log('Adresse IP : ' + ipAddress);
+        })
+        .catch(error => console.error('Erreur lors de la récupération de l\'adresse IP : ' + error));
+</script>
